@@ -1,0 +1,485 @@
+.benefits-hero {
+    background: var(--bg-gradient);
+    padding: calc(var(--spacing-3xl) * 2) 0;
+    color: var(--bg-secondary2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-overlay);
+    z-index: var(--z-normal);
+}
+
+.benefits-hero .container {
+    position: relative;
+    z-index: var(--z-dropdown);
+}
+
+.benefits-hero h1 {
+    font-size: var(--font-size-4xl);
+    font-family: var(--font-primary);
+    margin-bottom: var(--spacing-lg);
+    color: var(--bg-secondary2);
+    line-height: var(--line-height-tight);
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-xl);
+    max-width: var(--container-md);
+    margin: 0 auto var(--spacing-xl);
+    color: var(--bg-secondary2);
+    line-height: var(--line-height-loose);
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+.hero-cta .primary-btn {
+    background: var(--text-white);
+    color: var(--primary-color);
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    border-radius: var(--btn-border-radius);
+    font-weight: var(--btn-font-weight);
+    transition: var(--transition-base);
+    border: 2px solid var(--text-white);
+}
+
+.hero-cta .primary-btn:hover {
+    background: transparent;
+    color: var(--bg-secondary2);
+    transform: translateY(-2px);
+}
+
+.hero-cta .secondary-btn {
+    background: transparent;
+    color: var(--bg-secondary2);
+    border: 2px solid var(--text-white);
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    border-radius: var(--btn-border-radius);
+    font-weight: var(--btn-font-weight);
+    transition: var(--transition-base);
+}
+
+.hero-cta .secondary-btn:hover {
+    background: var(--text-white);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Benefits Grid Section */
+.benefits-grid-section {
+    padding: calc(var(--spacing-3xl) * 1.5) 0;
+    background: var(--bg-light);
+    position: relative;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--grid-gap);
+    padding: var(--spacing-md);
+    max-width: var(--container-xl);
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: var(--bg-primary);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+    border: 1px solid var(--border-color-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--bg-gradient);
+    opacity: 0;
+    transition: var(--transition-base);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.benefit-card:hover::before {
+    opacity: 1;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-lg);
+    /* background: var(--bg-gradient); */
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: var(--text-white); */
+    /* box-shadow: var(--shadow-md); */
+}
+
+.benefit-icon i {
+    /* font-size: var(--font-size-2xl); */
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-xl);
+    font-weight: var(--btn-font-weight);
+    line-height: var(--line-height-tight);
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+    line-height: var(--line-height-base);
+    margin: 0;
+    font-size: var(--font-size-base);
+}
+
+/* Dark Mode Specific Styles */
+@media (prefers-color-scheme: dark) {
+    .benefit-card {
+        background: var(--bg-secondary);
+    }
+
+    .benefit-card h3 {
+        color: var(--bg-secondary2);
+    }
+
+    .benefit-card p {
+        color: var(--text-light);
+    }
+
+    .benefit-icon {
+        background: var(--primary-color);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .benefits-hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+        padding: 0 var(--spacing-md);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: var(--spacing-md);
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 var(--spacing-md);
+    }
+
+    .benefit-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Animation Styles */
+/* [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition-base);
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+/* Enhanced card hover states */
+.benefit-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Accessibility improvements */
+.benefit-card:focus-within::before {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .benefit-card,
+    .benefit-card::before,
+    [data-aos="fade-up"] {
+        transition: none;
+    }
+}
+/* Science Section Styles */
+.science-section {
+    padding: var(--spacing-3xl) 0;
+    background: linear-gradient(to bottom, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    overflow: hidden;
+}
+
+.science-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.science-text {
+    padding: var(--spacing-xl);
+}
+
+.science-text h3 {
+    color: var(--primary-color);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.science-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: var(--border-radius-full);
+}
+
+.science-text p {
+    color: var(--text-secondary);
+    line-height: var(--line-height-loose);
+    font-size: var(--font-size-lg);
+}
+
+.science-visual {
+    position: relative;
+    height: 400px;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.ph-scale {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, 
+        #ff4444 0%,    /* Acidic */
+        #ffd700 50%,   /* Neutral */
+        #44ff44 100%   /* Alkaline */
+    );
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+}
+
+.ph-marker {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--text-white);
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+    padding: var(--spacing-3xl) 0;
+    background: var(--bg-primary);
+}
+
+.testimonials-slider {
+    max-width: var(--container-lg);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    position: relative;
+}
+
+.testimonial-slide {
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    margin: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+}
+
+.testimonial-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.testimonial-content {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.testimonial-image {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    flex-grow: 1;
+}
+
+.testimonial-text p {
+    font-size: var(--font-size-lg);
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-loose);
+    font-style: italic;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
+}
+
+.testimonial-rating i {
+    color: var(--warning-color);
+}
+
+.testimonial-text h4 {
+    color: var(--primary-color);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xs);
+}
+
+.testimonial-text span {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* Slider Navigation */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.slider-dot.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .science-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .science-visual {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .testimonial-rating {
+        justify-content: center;
+    }
+
+    .testimonial-slide {
+        padding: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 576px) {
+    .science-text {
+        padding: var(--spacing-md);
+    }
+
+    .science-text h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    .science-text p {
+        font-size: var(--font-size-base);
+    }
+
+    .testimonial-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    .science-section {
+        background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-secondary) 100%);
+    }
+
+    .testimonial-slide {
+        background: var(--bg-dark);
+    }
+
+    .science-visual {
+        background: var(--bg-dark);
+    }
+}

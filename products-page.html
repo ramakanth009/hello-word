@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Kobra Ionizers</title>
+    <link href="./assets/css/variables.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/navbar.css" rel="stylesheet" />
+    <link href="./assets/css/forms.css" rel="stylesheet" />
+    <link href="./assets/css/products.css" rel="stylesheet" />
+    <link href="./assets/css/about-page-styles.css" rel="stylesheet" />
+    <link href="./assets/css/responsive.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <img src="./images/Kobra Logo-2-01.png" alt="Kobra Ionizers Logo" class="logo">
+            </div>
+            
+            <div >
+                <ul class="nav-links">
+                    <li>
+                        <a  href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="active" href="products-page.html">Products</a>
+                    </li>
+                    <!-- <li><a href="#technology">Technology</a></li> -->
+                    <li>
+                        <a href="benefits-page.html">Benefits</a>
+                    </li>
+                    <li>
+                        <a href="about-page.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-cta">
+                <a href="tel:6353536363" class="cta-phone">6353536363</a>
+                <button class="cta-button">Book Demo</button>
+            </div>
+
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="product-hero">
+            <div class="container">
+                <h1>Transform Your Water Quality</h1>
+                <p>Discover our range of advanced water ionization solutions for homes and businesses</p>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="product-categories">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="residential">Residential</button>
+                    <button class="filter-btn" data-filter="industrial">Industrial</button>
+                    <button class="filter-btn" data-filter="bottles">Water Bottles</button>
+                </div>
+
+                <!-- Residential Products -->
+                <div class="product-category" id="residential">
+                    <h2>Residential Ionizers</h2>
+                    <div class="product-grid">
+                        <!-- K5 Model -->
+                        <div class="product-card" data-aos="fade-up">
+                            <div class="product-badge">Best Seller</div>
+                            <div class="product-image">
+                                <img src="images/WhatsApp Image 2024-11-11 at 00.46.31_3cc45e72.jpg" alt="Kobra K5">
+                            </div>
+                            <div class="product-content">
+                                <h3>Kobra K5 - 5 Plates</h3>
+                                <p>Perfect solution for small to medium-sized households seeking pure, ionized water.</p>
+                                
+                                <div class="product-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Power</span>
+                                        <span class="spec-value">0-400W</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Flow Rate</span>
+                                        <span class="spec-value">40-50 LPH</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">pH Levels</span>
+                                        <span class="spec-value">7.5/8.5/9.5</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">ORP</span>
+                                        <span class="spec-value">-100 TO -500</span>
+                                    </div>
+                                </div>
+
+                                <div class="product-features">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>5 Titanium-Platinum Ionization Plates</li>
+                                        <li>Smart Filter Monitoring System</li>
+                                        <li>Auto-Cleaning Technology</li>
+                                        <li>Touch Control Panel</li>
+                                    </ul>
+                                </div>
+
+                                <div class="product-price">
+                                    <span class="price-amount">₹1,15,000/-</span>
+                                    <button class="product-btn primary-btn letfix" onclick="bookDemo('k5')">
+                                        Book Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Similar cards for K7, K9, K11 -->
+                        <!-- K7 Model -->
+                        <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="product-badge">Popular Choice</div>
+                            <div class="product-image">
+                                <img src="images/WhatsApp Image 2024-11-11 at 00.46.31_9b758398.jpg" alt="Kobra K7">
+                            </div>
+                            <div class="product-content">
+                                <h3>Kobra K7 - 7 Plates</h3>
+                                <p>Advanced water ionization for medium to large families with enhanced features.</p>
+                                
+                                <div class="product-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Power</span>
+                                        <span class="spec-value">0-400W</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Flow Rate</span>
+                                        <span class="spec-value">50-60 LPH</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">pH Levels</span>
+                                        <span class="spec-value">7.5/8.5/9.5</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">ORP</span>
+                                        <span class="spec-value">-100 TO -600</span>
+                                    </div>
+                                </div>
+
+                                <div class="product-features">
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>7 Premium Ionization Plates</li>
+                                        <li>Dual-Stage Filtration</li>
+                                        <li>Energy-Efficient Design</li>
+                                        <li>Child Safety Lock</li>
+                                    </ul>
+                                </div>
+
+                                <div class="product-price">
+                                    <span class="price-amount">₹1,35,000/-</span>
+                                    <button class="product-btn primary-btn letfix" onclick="bookDemo('k7')">
+                                        Book Demo
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industrial Products -->
+                <div class="product-category" id="industrial">
+                    <h2>Industrial Solutions</h2>
+                    <div class="product-grid">
+                        <!-- K500 Model -->
+                        <div class="product-card large" data-aos="fade-up">
+                            <div class="product-badge">High Capacity</div>
+                            <div class="product-image">
+                                <img src="images/WhatsApp Image 2024-11-11 at 00.46.32_b374e12e.jpg" alt="Kobra K500">
+                            </div>
+                            <div class="product-content">
+                                <h3>Kobra K500 - Industrial Grade</h3>
+                                <p>High-performance ionization system for industrial and commercial applications.</p>
+                                
+                                <div class="product-specs">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Capacity</span>
+                                        <span class="spec-value">500 LPH</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Plates</span>
+                                        <span class="spec-value">70 Plates</span>
+                                    </div>
+                                </div>
+
+                                <div class="product-features">
+                                    <h4>Industrial Features</h4>
+                                    <ul>
+                                        <li>70 Titanium-Platinum Plates</li>
+                                        <li>Multi-Stage Filtration</li>
+                                        <li>Advanced Control System</li>
+                                        <li>Industrial-Grade Construction</li>
+                                        <li>Real-Time Monitoring</li>
+                                    </ul>
+                                </div>
+
+                                <div class="product-price">
+                                    <span class="price-amount">₹7,00,000/- (Plus GST)</span>
+                                    <button class="product-btn primary-btn letfix" onclick="bookDemo('k500')">
+                                        Request Quote
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Water Bottles Section -->
+                <div class="product-category" id="bottles">
+                    <h2>Alkaline Water Bottles</h2>
+                    <div class="product-grid">
+                        <!-- Bottles will be populated via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warranty Section -->
+<section class="warranty-section">
+    <div class="container">
+        <div class="warranty-grid">
+            <div class="warranty-image">
+                <img src="./images/WhatsApp Image 2024-11-11 at 00.50.37_6c2bf8a3.jpg" alt="12 Year Warranty" class="warranty-badge"/>
+            </div>
+            <div class="warranty-content">
+                <h2>Exclusive 12-Year Warranty</h2>
+                <p>We stand behind our products with industry-leading warranty coverage</p>
+                <ul class="warranty-features">
+                    <li>
+                        <i class="check-icon"></i>
+                        Comprehensive Parts Coverage
+                    </li>
+                    <li>
+                        <i class="check-icon"></i>
+                        Professional Service Support
+                    </li>
+                    <li>
+                        <i class="check-icon"></i>
+                        Free Installation
+                    </li>
+                    <li>
+                        <i class="check-icon"></i>
+                        24/7 Customer Support
+                    </li>
+                </ul>
+                <button class="cta-button">Learn More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Experience Pure, Ionized Water?</h2>
+                <p>Book a free demo today and transform your water quality</p>
+                <button class="primary-btn">Book Free Demo</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Contact Section -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <a href="tel:+916353536363">
+                        <i class="fas fa-phone"></i>
+                        +91 635353 6363
+                    </a>
+                    <a href="tel:+919000017401">
+                        <i class="fas fa-phone"></i>
+                        +91 900001 7401
+                    </a>
+                    <a href="mailto:bhaskaraionizersindiallp@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        bhaskaraionizersindiallp@gmail.com
+                    </a>
+                </div>
+    
+                <!-- Office Locations -->
+                <div class="office">
+                    <h4><i class="fas fa-building"></i> Hyderabad Office</h4>
+                    <p>#8-3-214/22/S, Plot No. 22, 4th Floor,<br>
+                    Sai Surya Tata Towers, S.R. Nagar,<br>
+                    Hyderabad-500038, Telangana</p>
+                </div>
+    
+                <div class="office">
+                    <h4><i class="fas fa-building"></i> Delhi Office</h4>
+                    <p>81, Ground Floor, World Trade Centre,<br>
+                    Connaught Place,<br>
+                    NEW DELHI - 110 001</p>
+                </div>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="benefits.html">Benefits</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p class="footerconnect">Stay connected with us on social media for the latest updates and news.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© 2024 Kobra Ionizers. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/products.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</body>
+</html>
